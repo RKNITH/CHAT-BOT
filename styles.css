@@ -1,0 +1,114 @@
+/* styles.css */
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #200231, #592ff5);
+    /* Linear background gradient */
+}
+
+.heading h1 {
+    color: #592ff5;
+    font-family: cursive;
+}
+
+.chat-container {
+    width: 90%;
+    /* Adjusted width for responsiveness */
+    max-width: 400px;
+    /* Maximum width */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.chat-window {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.message-content {
+    display: flex;
+    align-items: center;
+}
+
+.message-text {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 80%;
+}
+
+.bot .message-text {
+    background: #e6e6e6;
+    text-align: left;
+}
+
+.user .message-text {
+    background: #0084ff;
+    color: white;
+    text-align: right;
+    margin-left: auto;
+}
+
+.timestamp {
+    font-size: 0.8em;
+    color: #888;
+    margin-left: 10px;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.user-avatar {
+    background: url('ava1.jpeg') center center / cover no-repeat;
+}
+
+.bot-avatar {
+    background: url('ava2.jpg') center center / cover no-repeat;
+}
+
+.input-container {
+    display: flex;
+}
+
+#user-input {
+    width: calc(100% - 100px);
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+button {
+    width: 50px;
+    border: none;
+    background: #0084ff;
+    color: white;
+    cursor: pointer;
+}
+
+/* Media queries for smaller devices */
+@media only screen and (max-width: 600px) {
+    .chat-container {
+        width: 100%;
+        max-width: none;
+    }
+}
